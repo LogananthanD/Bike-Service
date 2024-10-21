@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Welcome() {
+  //Welcome will act as a root page for the web app and it contains the 3 links ,
+  //First link is for login page , second link is for sign up page , third link is for service page
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', backgroundColor: '#f9f9f9', color: '#333', padding: '0', margin: '0' }}>
   {/* Hero Section */}
