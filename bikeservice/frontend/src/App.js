@@ -7,7 +7,9 @@ import Ownerdesk from "./pages/owner/Ownerdesk";
 function App() {
   return (
     <div className="App">
+    //React router DOM for managing the routes
       <BrowserRouter>
+    //All the route are wrapped with a routes component 
       <Routes>
         <Route path='/' element={<Welcome/>}/>
         <Route path='/signup' element={<Signup/>}/>
