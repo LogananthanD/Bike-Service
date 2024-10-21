@@ -2,14 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
+  //Hook for navigating between components
   const navigate = useNavigate();
+  //used to handle the login logics
   const handleLogin = async (e) => {
     e.preventDefault();
+    //Retriving a data from a form 
     const email = e.target[0].value;
     const pass = e.target[1].value;
     const customerData = { email, pass };
     try {
       console.log("request sent");
+      //Api to send an email and password to login 
       const res = await fetch("http://localhost:4000/api/login", {
         method: "POST",
         body: JSON.stringify(customerData),
@@ -19,6 +23,7 @@ function Login() {
       });
       console.log("response");
       if (res.status === 200) {
+        //After 2sec delay navigate to services component
         setTimeout(() => {
           navigate("/services", { state: { email } });
         }, [2000]);
