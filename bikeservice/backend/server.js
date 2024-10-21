@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 const routerr = require('./route/routes')
-
+//Its used to connect with the database
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     app.listen(process.env.PORT,()=>{
