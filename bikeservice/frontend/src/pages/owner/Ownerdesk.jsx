@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 
 function Ownerdesk() {
   const [customersData, setCustomersData] = useState([]);
+  //fetch the user data and render it as a item
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("http://localhost:4000/api");
       const jsonResponse = await response.json();
+      //Set the fetched value to a state variable
       setCustomersData(jsonResponse);
     };
     fetchData();
   }, []);
-
+//Function to handle the changes in the card
   const handleChange = async (e, email, sname) => {
     const status = e.target.value;
     console.log(status, email, sname);
+    //Api to send the updated status
     const response = await fetch("http://localhost:4000/api/updateStatus", {
       method: "PATCH",
       body: JSON.stringify({
