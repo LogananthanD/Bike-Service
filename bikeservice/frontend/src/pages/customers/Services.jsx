@@ -2,15 +2,18 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 function Services() {
+  //Get the email data from an navigator object
   const location = useLocation();
   const email = location.state?.email;
   // console.log(email)
+  //Retrive a data from a form
   const handleService = async (e) => {
     e.preventDefault();
     const servicename = e.target[0].value;
     const info = { email, servicename };
     try {
       console.log("request sent");
+      //Api send the email and the services to update the services
       const res = await fetch("http://localhost:4000/api/service", {
         method: "POST",
         body: JSON.stringify(info),
@@ -19,6 +22,7 @@ function Services() {
         },
       });
       console.log("response");
+      //Console the message if the status is equal to 200
       if (res.status === 200) {
         console.log("Mail is sended to Mechanic");
       } else {
