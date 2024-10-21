@@ -2,7 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  //Hook to navigate between components
   const navigate = useNavigate();
+  //Function to handle the new user registration
   const handleSignup = async (e) => {
     e.preventDefault();
     const name = e.target[0].value;
@@ -11,6 +13,7 @@ function Signup() {
     const customerData = { name, email, password };
     try {
       console.log("request sent");
+      //Api to create a new user
       const res = await fetch("http://localhost:4000/api/register", {
         method: "POST",
         body: JSON.stringify(customerData),
@@ -20,9 +23,11 @@ function Signup() {
       });
       console.log("response");
       if (res.status === 200) {
+        //After 2sec delay navigate to the login component
         setTimeout(() => navigate("/login"), [2000]);
       } else {
         const msg = await res.json();
+        //Conmsole the response message
         console.log(msg);
       }
     } catch (err) {
