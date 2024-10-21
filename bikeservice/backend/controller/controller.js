@@ -2,7 +2,7 @@ const auto = require('../model/model')
 require('dotenv').config()
 
 const nodemailer = require('nodemailer');
-
+//Instance to send an mail
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -11,7 +11,7 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-
+//Function to create a new user
 const signup = async (req,res)=>{
 
     const {name,email,password} = req.body
@@ -32,7 +32,7 @@ const signup = async (req,res)=>{
 
 }
 
-
+//Function to authenticate an user
 const signin = async (req,res)=>{
     const {email,pass} = req.body
     try{
@@ -53,7 +53,7 @@ const signin = async (req,res)=>{
         return res.status(500).json({error:err.message})
     }
 }
-
+//Function to update a service
 const setService = async (req,res)=>{
 
     const {email,servicename} = req.body
@@ -121,7 +121,7 @@ const setService = async (req,res)=>{
         res.status(500).json({message:err.message})
     }
 } 
-
+//Function to retrive all data from a database
 const getAll = async (req,res)=>{
   try{
     const data = await auto.find({})
@@ -131,7 +131,7 @@ const getAll = async (req,res)=>{
     res.status(500).json({error:err.message})
   }
 }
-
+//Function to update the status of the each uesr 
 const statusUpdate = async (req,res)=>{
   const {email,status,sname} = req.body
   try{
