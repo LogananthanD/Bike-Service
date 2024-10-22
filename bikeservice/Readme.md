@@ -14,7 +14,7 @@ Features :
 Tech Stack :
 
 Frontend: React.js, HTML, CSS
-Backend: Node.js, Express.js
+Backend: Node.js
 Database: MongoDB
 Email Notifications: Nodemailer
 
