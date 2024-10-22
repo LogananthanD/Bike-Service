@@ -7,14 +7,14 @@ The app is built using React.js HTML and Css for the frontend, Node.js for the b
 Features :
 
 * Customers can book services such as general service , oil changes, and water washes.
-* Owners can list services, manage bookings, and mark them as ready for delivery or completed.
+* Owner(john) can list services, manage bookings, and mark them as ready for delivery or completed.
 * Email notifications are sent to both customers and owners regarding booking status updates.
 * Authentication for customers to log in using email ID.
   
 Tech Stack :
 
 Frontend: React.js, HTML, CSS
-Backend: Node.js, Express.js
+Backend: Node.js
 Database: MongoDB
 Email Notifications: Nodemailer
 
