@@ -17,7 +17,7 @@ function Ownerdesk() {
     const status = e.target.value;
     console.log(status, email, sname);
     //Api to send the updated status
-    const response = await fetch("http://localhost:4000/api/updateStatus", {
+    const response = await fetch("https://bike-service-backend-nctl.onrender.com/api/updateStatus", {
       method: "PATCH",
       body: JSON.stringify({
         email,
