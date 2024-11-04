@@ -5,7 +5,7 @@ function Ownerdesk() {
   //fetch the user data and render it as a item
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:4000/api");
+      const response = await fetch("https://bike-service-backend-nctl.onrender.com/api");
       const jsonResponse = await response.json();
       //Set the fetched value to a state variable
       setCustomersData(jsonResponse);
