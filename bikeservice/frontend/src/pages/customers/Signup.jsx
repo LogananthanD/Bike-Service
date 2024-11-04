@@ -14,7 +14,7 @@ function Signup() {
     try {
       console.log("request sent");
       //Api to create a new user
-      const res = await fetch("http://localhost:4000/api/register", {
+      const res = await fetch("https://bike-service-backend-nctl.onrender.com/api/register", {
         method: "POST",
         body: JSON.stringify(customerData),
         headers: {
