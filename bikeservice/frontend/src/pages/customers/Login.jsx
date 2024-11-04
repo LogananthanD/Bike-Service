@@ -14,7 +14,7 @@ function Login() {
     try {
       console.log("request sent");
       //Api to send an email and password to login 
-      const res = await fetch("http://localhost:4000/api/login", {
+      const res = await fetch("https://bike-service-backend-nctl.onrender.com/api/login", {
         method: "POST",
         body: JSON.stringify(customerData),
         headers: {
