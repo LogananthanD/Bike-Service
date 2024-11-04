@@ -9,10 +9,10 @@ app.use(express.json())
 
 const routerr = require('./route/routes')
 //Its used to connect with the database
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://loga:loga@myserver.in18m.mongodb.net/bikeservice?retryWrites=true&w=majority&appName=myserver")
 .then(()=>{
-    app.listen(process.env.PORT,()=>{
-        console.log(`Listening port ${process.env.PORT}`)
+    app.listen(4000,()=>{
+        console.log(`Listening port 4000`)
     })
 })
 .catch((err)=>{
