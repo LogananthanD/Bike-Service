@@ -1,5 +1,5 @@
 const auto = require('../model/model')
-require('dotenv').config()
+// require('dotenv').config()
 
 const nodemailer = require('nodemailer');
 //Instance to send an mail
@@ -7,7 +7,7 @@ let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'heathledger323@gmail.com',  
-        pass: process.env.KEY
+        pass: 'bsxg pqpf zyfe esib'
     }
 });
 
