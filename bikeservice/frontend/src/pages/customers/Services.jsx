@@ -14,7 +14,7 @@ function Services() {
     try {
       console.log("request sent");
       //Api send the email and the services to update the services
-      const res = await fetch("http://localhost:4000/api/service", {
+      const res = await fetch("https://bike-service-backend-nctl.onrender.com/api/service", {
         method: "POST",
         body: JSON.stringify(info),
         headers: {
