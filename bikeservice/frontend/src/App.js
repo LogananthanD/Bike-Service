@@ -17,7 +17,7 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         
         {/* ownerPage */}
-        <Route path="/secret" element={<Ownerdesk/>}/>
+        <Route path="/owner" element={<Ownerdesk/>}/>
       </Routes>
       </BrowserRouter>
     </div>
